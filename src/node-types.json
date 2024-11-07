@@ -1,0 +1,135 @@
+[
+  {
+    "type": "address",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "address",
+          "named": true
+        },
+        {
+          "type": "delete_command",
+          "named": true
+        },
+        {
+          "type": "print_command",
+          "named": true
+        },
+        {
+          "type": "substitute_command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "regex",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "replacement",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "script",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "substitute_command",
+    "named": true,
+    "fields": {
+      "flags": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "substitute_flags",
+            "named": true
+          }
+        ]
+      },
+      "pattern": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          }
+        ]
+      },
+      "replacement": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "replacement",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "substitute_flags",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "delete_command",
+    "named": true
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "print_command",
+    "named": true
+  },
+  {
+    "type": "s",
+    "named": false
+  }
+]

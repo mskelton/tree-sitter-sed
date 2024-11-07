@@ -1,0 +1,52 @@
+==========================
+substitute command with global flag
+==========================
+
+s/foo/bar/g
+
+----
+
+(script
+  (command
+    (substitute_command
+      pattern: (regex)
+      replacement: (replacement)
+      flags: (substitute_flags))))
+
+==========================
+delete command with line address
+==========================
+
+/2/d
+
+----
+
+(script
+  (delete_command)
+  address: (regex))
+
+==========================
+substitute command with ignore-case flag
+==========================
+
+s/baz/qux/i
+
+----
+
+(script
+  (substitute_command
+    pattern: (regex)
+    replacement: (replacement)
+    flags: (substitute_flags)))
+
+==========================
+print command with number address
+==========================
+
+5p
+
+----
+
+(script
+  (print_command)
+  address: (number))
