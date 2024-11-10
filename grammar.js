@@ -10,6 +10,8 @@
 module.exports = grammar({
   name: "sed",
   rules: {
+    comment: () => token(seq("#", /.*/)),
+
     script: ($) => repeat(choice($.command)),
 
     command: ($) =>
